@@ -1,0 +1,3 @@
+### Architecture of elastic file system....
+
+![image](EFS.webp)
