@@ -5,4 +5,8 @@ Establish an Elastic File System infrastructure utilizing EC2 services through T
   - Amazon Elastic File System (Amazon EFS) provides a simple, scalable, elastic file system for general purpose workloads for use with AWS Cloud
 services and on-premises resources.
 
+### Architecture of elastic file system....
+
+![image](EFS.webp)
+
 
