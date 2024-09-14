@@ -1,3 +1,3 @@
 ### Architecture of elastic file system....
 
-![image](/Elastic-File-System/project_two2/efs_auto.webp)
+![image](Elastic-File-System/project_two2/efs_auto.webp)
