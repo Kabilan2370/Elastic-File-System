@@ -191,12 +191,11 @@ resource "aws_lb_listener" "sh_front" {
 # auto scalling template
 resource "aws_launch_template" "foobar" {
 
-  count                     = 3
   name_prefix               = "jbl-target"
   image_id                  = var.ami_id
   instance_type             = var.inst_type
   key_name                  = var.key_name
-  user_data                 = file("$efs_data")
+  user_data                 = file("efs_data.sh")
   tags = {
     Name = "machine1"
 }
@@ -204,9 +203,9 @@ resource "aws_launch_template" "foobar" {
 }
 resource "aws_autoscaling_group" "Hukkum" {
 
-  desired_capacity          = 1
-  max_size                  = 1
-  min_size                  = 1
+  desired_capacity          = 3
+  max_size                  = 3
+  min_size                  = 3
   health_check_type         = "EC2"
   vpc_zone_identifier       = [aws_subnet.sub1.id, aws_subnet.sub2.id, aws_subnet.sub3.id]
   # attach a lb target group
